@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block title %}QRCode
+{% endblock %}
+{% block body %}
+<style>
+  body{
+      text-align:center;
+  }
+</style>
+    <h1>QRCode du {{ date }}</h1></br>
+	<img src="{{ data_url }}"/><br/><br/>
+    <h2>Scannez moi pour laisser un avis sur votre repas!</h2>
+{% endblock %}
