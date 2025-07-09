@@ -12,7 +12,7 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 # Copie du code et installation des dépendances
 WORKDIR /app
 COPY . .
-RUN composer install --no-dev --optimize-autoloader
+RUN composer install --no-dev --optimize-autoloader --no-scripts
 
 # Étape 2 : Apache avec PHP 8.1 + mod_rewrite
 FROM php:8.1-apache
